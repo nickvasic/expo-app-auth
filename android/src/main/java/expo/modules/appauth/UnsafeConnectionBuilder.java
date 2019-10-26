@@ -17,8 +17,8 @@ package expo.modules.appauth;
 
 import android.annotation.SuppressLint;
 import android.net.Uri;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import net.openid.appauth.Preconditions;
