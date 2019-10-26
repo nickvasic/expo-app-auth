@@ -48,6 +48,9 @@
     "unimodules-constants-interface": "*"
   },
   "dependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.10",
+    "react-native-unimodules": "0.6.0",
     "invariant": "^2.2.4"
   },
   "devDependencies": {
