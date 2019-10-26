@@ -304,7 +304,7 @@ public class AppAuthModule extends ExportedModule {
     Intent postAuthIntent = new Intent(activity, AppAuthBrowserActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
     ConstantsInterface constantsService = mModuleRegistry.getModule(ConstantsInterface.class);
-    if (!"standalone".equals(constantsService.getAppOwnership())) {
+    if (!constantsService.getAppOwnership().matches("standalone|guest")) {
       if (!constantsService.getConstants().containsKey(AppAuthConstants.MANIFEST_URL)) {
         mAuthTask.reject(AppAuthConstants.Error.DEFAULT, "Missing " + AppAuthConstants.MANIFEST_URL + " in the experience Constants");
         return;
